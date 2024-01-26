@@ -1,14 +1,3 @@
-<!-- Aplikasi Antrian Berbasis Web 
-**********************************************
-* Developer   : Indra Styawantoro
-* Company     : Indra Studio
-* Release     : Juni 2021
-* Update      : -
-* Website     : www.indrasatya.com
-* E-mail      : indra.setyawantoro@gmail.com
-* WhatsApp    : +62-821-8686-9898
--->
-
 <!doctype html>
 <html lang="en" class="h-100">
 
@@ -23,7 +12,7 @@
   <title>Aplikasi Antrian Berbasis Web</title>
 
   <!-- Favicon icon -->
-  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -71,13 +60,13 @@
 
   <!-- Footer -->
   <footer class="footer mt-auto py-4">
-    <div class="container">
-      <!-- copyright -->
-      <div class="copyright text-center mb-2 mb-md-0">
-        &copy; 2021 - <a href="https://www.indrasatya.com/" target="_blank" class="text-danger text-decoration-none">www.indrasatya.com</a>. All rights reserved.
-      </div>
-    </div>
-  </footer>
+        <div class="container-fluid">
+            <div class="copyright text-center mb-2 mb-md-0">
+                &copy; 2024 - <a href="https://rssams.co.id" target="_blank" class="text-danger text-decoration-none">rssams.co.id</a>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
 
   <!-- jQuery Core -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
