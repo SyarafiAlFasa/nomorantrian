@@ -3,9 +3,9 @@ session_start();
 
 // Cek apakah pengguna sudah login
 if (!isset($_SESSION['signin']) || $_SESSION['signin'] !== true) {
-    // Jika belum login, redirect ke halaman login
-    header('Location: login.php');
-    exit;
+  // Jika belum login, redirect ke halaman login
+  header('Location: login.php');
+  exit;
 }
 
 // Ambil username dari sesi
@@ -13,6 +13,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
 ?>
 <!doctype html>
 <html lang="en" class="h-100">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -150,21 +151,27 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
                   <th>Panggil</th>
                 </tr>
               </thead>
-            </table>
+              <!-- Tombol Reset Antrian -->
+              <div class="text-end mt-3">
+                <button id="resetAntrian" class="btn btn-danger">Reset Antrian</button>
+              </div>
           </div>
         </div>
+        </table>
       </div>
+    </div>
+    </div>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="footer mt-auto py-4">
-        <div class="container-fluid">
-            <div class="copyright text-center mb-2 mb-md-0">
-                &copy; 2024 - <a href="https://rssams.co.id" target="_blank" class="text-danger text-decoration-none">rssams.co.id</a>. All rights reserved.
-            </div>
-        </div>
-    </footer>
+    <div class="container-fluid">
+      <div class="copyright text-center mb-2 mb-md-0">
+        &copy; 2024 - <a href="https://rssams.co.id" target="_blank" class="text-danger text-decoration-none">rssams.co.id</a>. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
 
   <!-- load file audio bell antrian -->
@@ -276,6 +283,22 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
         });
       });
 
+      // Menangani klik tombol "Reset Antrian"
+      $('#resetAntrian').on('click', function() {
+        // Konfirmasi reset antrian
+        if (confirm("Anda yakin ingin mereset antrian?")) {
+          // Lakukan reset antrian
+          $.ajax({
+            type: "POST",
+            url: "reset_antrian.php", // Ganti dengan URL yang sesuai
+            success: function() {
+              // Reload data setelah reset
+              table.ajax.reload(null, false);
+            }
+          });
+        }
+      });
+
       // auto reload data antrian setiap 1 detik untuk menampilkan data secara realtime
       setInterval(function() {
         $('#jumlah-antrian').load('get_jumlah_antrian.php').fadeIn("slow");
@@ -287,4 +310,5 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
     });
   </script>
 </body>
+
 </html>

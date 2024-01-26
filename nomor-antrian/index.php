@@ -60,23 +60,12 @@
 
   <!-- Footer -->
   <footer class="footer mt-auto py-4">
-<<<<<<< HEAD
-    <div class="container">
-      <!-- copyright -->
-      <div class="copyright text-center mb-2 mb-md-0">
-        &copy; 2021 - <a href="https://www.rssams.co.id/" target="_blank" class="text-danger text-decoration-none">www.rssams.co.id</a>. All rights reserved.
-      </div>
-    </div>
-  </footer>
-=======
         <div class="container-fluid">
             <div class="copyright text-center mb-2 mb-md-0">
                 &copy; 2024 - <a href="https://rssams.co.id" target="_blank" class="text-danger text-decoration-none">rssams.co.id</a>. All rights reserved.
             </div>
         </div>
     </footer>
-
->>>>>>> e6b3993252ee3d04501e18a1899f427ad33d29be
 
   <!-- jQuery Core -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
