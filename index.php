@@ -1,14 +1,3 @@
-<!-- Aplikasi Antrian Berbasis Web 
-**********************************************
-* Developer   : Indra Styawantoro
-* Company     : Indra Studio
-* Release     : Juni 2021
-* Update      : -
-* Website     : www.indrasatya.com
-* E-mail      : indra.setyawantoro@gmail.com
-* WhatsApp    : +62-821-8686-9898
--->
-
 <!doctype html>
 <html lang="en" class="h-100">
 
