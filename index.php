@@ -23,7 +23,7 @@
   <title>Aplikasi Antrian Berbasis Web</title>
 
   <!-- Favicon icon -->
-  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -100,13 +100,13 @@
 
   <!-- Footer -->
   <footer class="footer mt-auto py-4">
-    <div class="container-fluid">
-      <!-- copyright -->
-      <div class="copyright text-center mb-2 mb-md-0">
-        &copy; 2021 - <a href="https://www.indrasatya.com/" target="_blank" class="text-danger text-decoration-none">www.indrasatya.com</a>. All rights reserved.
-      </div>
-    </div>
-  </footer>
+        <div class="container-fluid">
+            <div class="copyright text-center mb-2 mb-md-0">
+                &copy; 2024 - <a href="https://rssams.co.id" target="_blank" class="text-danger text-decoration-none">rssams.co.id</a>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
 
   <!-- Popper and Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
