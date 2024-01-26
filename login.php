@@ -38,8 +38,6 @@ if (isset($_POST['signin'])) {
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,14 +74,34 @@ if (isset($_POST['signin'])) {
                             <form action="" method="POST">
                                 <div class="mb-3">
                                     <label for="username" class="form-label">Username:</label>
-                                    <input type="username" class="form-control" id="username" name="username" required>
+                                    <input type="text" class="form-control" id="username" name="username" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password:</label>
-                                    <input type="password" class="form-control" id="password" name="password" required>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password" name="password" required>
+                                        <span class="input-group-text" id="show-password-toggle" onclick="togglePassword()">
+                                            <i class="bi bi-eye"></i>
+                                        </span>
+                                    </div>
                                 </div>
                                 <button type="submit" name="signin" class="btn btn-primary">Login</button>
                             </form>
+
+                            <script>
+                                function togglePassword() {
+                                    var passwordField = document.getElementById("password");
+                                    var passwordToggle = document.getElementById("show-password-toggle");
+
+                                    if (passwordField.type === "password") {
+                                        passwordField.type = "text";
+                                        passwordToggle.innerHTML = '<i class="bi bi-eye-slash"></i>';
+                                    } else {
+                                        passwordField.type = "password";
+                                        passwordToggle.innerHTML = '<i class="bi bi-eye"></i>';
+                                    }
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>
