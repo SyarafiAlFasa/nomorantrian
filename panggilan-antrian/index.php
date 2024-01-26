@@ -1,17 +1,18 @@
-<!-- Aplikasi Antrian Berbasis Web 
-**********************************************
-* Developer   : Indra Styawantoro
-* Company     : Indra Studio
-* Release     : Juni 2021
-* Update      : -
-* Website     : www.indrasatya.com
-* E-mail      : indra.setyawantoro@gmail.com
-* WhatsApp    : +62-821-8686-9898
--->
+<?php
+session_start();
 
+// Cek apakah pengguna sudah login
+if (!isset($_SESSION['signin']) || $_SESSION['signin'] !== true) {
+    // Jika belum login, redirect ke halaman login
+    header('Location: login.php');
+    exit;
+}
+
+// Ambil username dari sesi
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
+?>
 <!doctype html>
 <html lang="en" class="h-100">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -23,13 +24,15 @@
   <title>Aplikasi Antrian Berbasis Web</title>
 
   <!-- Favicon icon -->
-  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN6b1XMjz9gqV8oqO4ARckgMViEdGS+Q" crossorigin="anonymous">
+
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
@@ -58,9 +61,9 @@
               <li class="breadcrumb-item" aria-current="page">Antrian</li>
               <li class="breadcrumb-item" aria-current="page" id="lokasi-loket" style="display: none;"><?php echo isset($_SESSION['loket']) ? $_SESSION['loket'] : ''; ?></li>
               <!-- Tambahkan bagian untuk menampilkan informasi admin yang login -->
-              <li class="breadcrumb-item" aria-current="page">Admin: <?php echo isset($_SESSION['username']) ? $_SESSION['username'] : ''; ?></li>
+              <li class="breadcrumb-item" aria-current="page"> <?php echo isset($_SESSION['username']) ? $_SESSION['username'] : ''; ?></li>
               <li class="nav-item">
-                <a class="nav-link" href="logout.php">Logout</a>
+                  <a class="nav-link" href="logout.php">logout</a>
               </li>
             </ol>
           </nav>
@@ -283,5 +286,4 @@
     });
   </script>
 </body>
-
 </html>
