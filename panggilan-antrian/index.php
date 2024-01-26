@@ -62,8 +62,10 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
               <li class="breadcrumb-item" aria-current="page" id="lokasi-loket" style="display: none;"><?php echo isset($_SESSION['loket']) ? $_SESSION['loket'] : ''; ?></li>
               <!-- Tambahkan bagian untuk menampilkan informasi admin yang login -->
               <li class="breadcrumb-item" aria-current="page"> <?php echo isset($_SESSION['username']) ? $_SESSION['username'] : ''; ?></li>
-              <li class="nav-item">
-                  <a class="nav-link" href="logout.php">logout</a>
+              <li class="nav-item ms-2">
+                <a href="logout.php" style="color: red;">
+                  <i class="bi bi-power"></i>
+                </a>
               </li>
             </ol>
           </nav>
@@ -157,14 +159,13 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest';
 
   <!-- Footer -->
   <footer class="footer mt-auto py-4">
-    <div class="container">
-      <hr class="my-4">
-      <!-- copyright -->
-      <div class="copyright text-center mb-2 mb-md-0">
-        &copy; 2021 - <a href="https://www.indrasatya.com/" target="_blank" class="text-danger text-decoration-none">www.indrasatya.com</a>. All rights reserved.
-      </div>
-    </div>
-  </footer>
+        <div class="container-fluid">
+            <div class="copyright text-center mb-2 mb-md-0">
+                &copy; 2024 - <a href="https://rssams.co.id" target="_blank" class="text-danger text-decoration-none">rssams.co.id</a>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
 
   <!-- load file audio bell antrian -->
   <audio id="tingtung" src="../assets/audio/tingtung.mp3"></audio>
